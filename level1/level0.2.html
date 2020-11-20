@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            color: hotpink;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+        }
+        #container{
+            max-width: 960px;
+            margin: 0 auto ;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(4,minmax(100px,auto));
+
+        }
+        #container div{
+            background: indigo;
+            padding: 30px;
+            
+        }
+        #container div:nth-child(even){
+            background: lawngreen;
+        }
+        .one{
+            grid-column-start:1 ;
+            grid-column-end:3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        .nested{
+            display: grid;
+            grid-template-columns: repeat(2,minmax(30px,auto));
+            grid-gap: 7px;
+            border: 1px solid black;
+            
+        }
+        .nested > div{
+            border: 1px solid black;
+        }
+        .nested > .hoe{
+            grid-column-start:2;
+            grid-column-end: 3;
+            
+        }
+/*         #container{
+            transform: rotateZ(40deg) scale(1);
+        } */
+
+    </style>
+</head>
+<body>
+ 
+<div id="container">
+    <div class="one">
+        jkljfdjfjjjjjjn
+        <div class="nested">
+            <header>
+                <div class="main_nav_logo">
+                    <a href=""><img src="" alt=""></a>
+                </div>
+                <div class="main_nav"></div>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Gallery</a></li>
+                        <li><a href="">About us</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+            </header>
+            <div class="hoe">1</div>
+            <div class="top">1</div>
+            <div class="hoey">1</div>
+            <div class="topp">1</div>
+        </div>
+    </div>
+    <div class="on"></div>
+    <div class="oe"></div>
+    <div class="onep"></div>
+    <div class="onl"></div>
+    <div class="onek"></div>
+    <div class="onekk"></div>
+    <div></div>
+    <div></div>
+    <img src="1.jpg" alt="" height="500px">
+ 
+</div>
+
+</div>
+</body>
+</html>
