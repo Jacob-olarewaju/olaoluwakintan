@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script type="text/javascript" src="indext8.js"></script>
+    <style type="text/css">
+        body {
+            color: black;
+            text-align: center;
+        }
+        
+        @media screen and (min-width: 760px) {
+            .content {
+                display: grid;
+                margin: 0 auto;
+                grid-template-columns: repeat(4, 1fr);
+                grid-auto-rows: minmax(90px, auto);
+                grid-template-areas: "header header header header" "slideshow slideshow slideshow slideshow " "slideshow slideshow slideshow slideshow " "slideshow slideshow slideshow slideshow " "slideshow slideshow slideshow slideshow " "slideshow slideshow slideshow slideshow " "aside aside main main" "nav nav main main" "section section section section" "section section section section"/*you can use . to create a gap or anything really*/
+                "footer footer footer footer";
+                /*grid area layout*/
+                grid-gap: 1px;
+            }
+        }
+        
+        @media screen and (max-width: 760px) {
+            .content {
+                display: grid;
+                max-width: 960px;
+                margin: 0 auto;
+                grid-template-columns: repeat(4, 1fr);
+                grid-auto-rows: minmax(100px, auto);
+                grid-template-areas: "header header header header" "footer footer footer footer" "slideshow slideshow slideshow slideshow " "slideshow slideshow slideshow slideshow " "main main main main" "main main main main" "aside aside nav nav" "section section section section"/*you can use . to create a gap or anything really*/
+                "section section section section";
+                grid-gap: 10px
+            }
+        }
+        
+        .content>* {
+            background-color: #335;
+        }
+        
+        header {
+            grid-area: header;
+            padding-top: 35px;
+            border-radius: 5px;
+        }
+        
+        .article {
+            grid-area: slideshow;
+            grid-row-gap: 0px;
+            grid-column-gap: 0px;
+        }
+        
+        main {
+            grid-area: main;
+            display: grid;
+            grid-column: span 2;
+            grid-template-columns: 1fr 1fr;
+            grid-row-gap: 0px;
+        }
+        
+        main p {
+            border: solid white 1px;
+            padding: 1px;
+            margin: 1px;
+        }
+        
+        section {
+            grid-area: section;
+        }
+        
+        aside {
+            grid-area: aside;
+        }
+        
+        nav {
+            grid-area: nav;
+        }
+        
+        footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <header>Header</header>
+        <div class="article">
+            <!-- 		
+			<button onclick ="pop()" >click me</button>
+			<h5 id="heading2">Some random text</h5> 
+ 			<input placeholder="poi" id="text1">
+			<input placeholder="pass" id="text2" type= password >
+			<button onclick="fn1()" id="btn1">click me</button> 
+-->
+            <!-- 			<input type="radio" name="grp1" id="rd1" value="simple snippets">simple Snippets</input><br>
+			<input type="radio" name="grp1"  id="rd2" value="Telusko learn" >Telusko learn</input>
+			<br>
+			<button onclick="fn2()" id="btn1"> click me</button> -->
+            <!-- 			<select id="select">
+				choose
+				<option value="simple snipets">simple snipets</option>
+				<option value="Telusko Learnings">Telusko Learnings</option>
+				<option value="MKBHD">MKBHD</option>
+			</select>
+			<button onclick="fn3()">click me</button> -->
+            <!--
+			<p >THIS IS A PARAGRAPH</p>
+			<p>THIS IS A PARAGRAPH</p>
+			<p>THIS IS A PARAGRAPH</p>
+			<p>THIS IS A PARAGRAPH</p>
+			<p>THIS IS A PARAGRAPH</p>
+			<button onclick = "changestyling()">click me</button>
+		-->
+
+        </div>
+        <main>
+            <p>1</p>
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
+            <p>6</p>
+        </main>
+        <section>Section</section>
+        <aside>Aside</aside>
+        <nav>Navigation</nav>
+        <footer>Footer</footer>
+    </div>
+</body>
+
+</html>
